@@ -1,0 +1,29 @@
+body {
+    background-color: #021aee;
+}
+
+.page-header {
+    color: #ffffff;
+}
+
+.world-map-container {
+    margin-top: 5%;
+}
+
+path {
+    transition: fill 0.3s ease;
+    fill: #d602ee;
+}
+
+path:hover {
+    fill: #09af00;
+}
+
+.location-display {
+    margin-top: 20%;
+}
+
+.image-asset {
+    width: 100%;
+    height: auto;
+}
