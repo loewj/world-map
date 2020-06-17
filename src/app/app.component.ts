@@ -2,6 +2,8 @@ import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
 import { MapObject, VisitedCountries } from 'src/shared/map';
 import { DomSanitizer } from '@angular/platform-browser';
 
+declare const VERSION: string;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +12,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
 
-  title = 'world-map';
+  title = 'Version: ' + VERSION;
   domParser;
   pathObjects;
 
