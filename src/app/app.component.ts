@@ -16,6 +16,8 @@ export class AppComponent {
   domParser;
   pathObjects;
 
+  hoverTitle = '';
+
   staticList = VisitedCountries;
 
   constructor(private sanitizer: DomSanitizer, private elementRef: ElementRef) { }
@@ -43,7 +45,20 @@ export class AppComponent {
     });
     
     this.pathObjects = this.sanitizer.bypassSecurityTrustHtml(elementsAsStrings.join());
-  
+
   }
 
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.querySelectorAll('.visited').forEach((el) => {
+      el.addEventListener("mouseenter", (event) => {   
+        // highlight the mouseenter target
+        this.hoverTitle = event.target.getAttribute('title');
+      })
+      el.addEventListener("mouseleave", (event) => {   
+        // highlight the mouseenter target
+        this.hoverTitle = '';
+      })
+    })
+  }
+ 
 }

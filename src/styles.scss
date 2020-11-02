@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+.map-container {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Hero New', 'hero-new', 'Arial','Helvetica','sans-serif';
+  
+    h1 {
+      color: #AB91B2;
+    }
+  
+    .map-svg {
+      .visited {
+        transition: fill 0.3s ease;
+        fill: #81B2A0;
+        &:hover {
+          fill: #AB91B2;
+        }
+      }
+      .not-visited {
+        fill: #B8CCC5;
+      }
+    }
+  
+  }
+  
