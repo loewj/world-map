@@ -1,1 +1,0 @@
-.map-container{display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:Hero New,hero-new,Arial,Helvetica,"sans-serif"}.map-container h1{color:#ab91b2}.map-container .map-svg .visited{transition:fill .3s ease;fill:#81b2a0}.map-container .map-svg .visited:hover{fill:#ab91b2}.map-container .map-svg .not-visited{fill:#b8ccc5}
