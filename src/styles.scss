@@ -1,31 +1,93 @@
-.map-container {
-  
+* {
+
+  font-family: 'Hero New', 'hero-new', 'Arial','Helvetica','sans-serif';
+
+  .app-container {
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
-    font-family: 'Hero New', 'hero-new', 'Arial','Helvetica','sans-serif';
-    font-weight: lighter;
 
-    margin-bottom: 5rem;
+    .list-container {
 
-    h2 {
-      color: #AB91B2;
-    }
-  
-    .map-svg {
-      max-height: 100%;
-      .visited {
-        transition: fill 0.3s ease;
-        fill: #81B2A0;
-        &:hover {
-          fill: #AB91B2;
+      order: 1;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        list-style-type: none;
+        a {
+          color: #AB91B2;
+          text-decoration: none;
+          &:hover {
+            color: #81B2A0;
+          }
+        }
+        li {
+          margin-bottom: .5rem;
         }
       }
-      .not-visited {
-        fill: #B8CCC5;
+    }
+  
+    .map-container {
+
+      width: 100%;
+      order: 2;
+
+      font-weight: lighter;
+  
+      margin-bottom: 5rem;
+  
+      h2 {
+        color: #AB91B2;
       }
+
+      display: flex;
+      .wrapper {
+        text-align: center;
+        width: 100%;
+        .map-svg {
+          width: 100%;
+          height: 100%;
+          .visited {
+            transition: fill 0.3s ease;
+            fill: #81B2A0;
+            &:hover {
+              fill: #AB91B2;
+            }
+          }
+          .not-visited {
+            fill: #B8CCC5;
+          }
+        }
+      }
+    
     }
   
   }
+
+  @media screen and (min-width:1210px) {
+    .app-container {
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+    .list-container {
+      width: 25% !important;
+      order: 1;
+      justify-content: space-between !important;
+      text-align: left !important;
+    }
+    .map-container {
+      width: 75% !important;
+      order: 2;
+    }
+  }
+
+  // REMOVE THE PADDING FROM SS INNER CONTENT WRAPPER
+  .main-content-inner-wrapper {
+    padding: 0 !important;
+  }
+
+}
   

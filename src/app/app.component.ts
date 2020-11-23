@@ -19,10 +19,19 @@ export class AppComponent {
   hoverTitle = '';
 
   staticList = VisitedCountries;
+  hyperlinkedList = [];
 
   constructor(private sanitizer: DomSanitizer, private elementRef: ElementRef) { }
 
   ngOnInit() {
+
+    this.staticList.sort()
+    this.hyperlinkedList = this.staticList.map(el => {
+      return {
+        countryName: el.replace(/-/g, " "),
+        hyperlink: `https://www.veronicaspann.com/${el}`
+      }
+    })
 
     this.domParser = new DOMParser();
 
