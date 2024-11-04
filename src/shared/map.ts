@@ -1,31 +1,3 @@
-export const VisitedCountries = [
-  'malaysia',
-  'belize',
-  'cambodia',
-  'indonesia',
-  'japan',
-  'laos',
-  'mongolia',
-  'nepal',
-  'philippines',
-  'south-korea',
-  'vietnam',
-  'iceland',
-  'italy',
-  'united-states',
-  'canada',
-  'mexico',
-  'cayman-islands',
-  'kenya',
-  'rwanda',
-  'tanzania',
-  'uganda',
-  'bolivia',
-  'colombia',
-  'new-zealand',
-  'drc'
-];
-
 export const MapObject = {
     paths: `
       <path
